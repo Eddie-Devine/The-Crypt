@@ -14,10 +14,10 @@ const port = process.env.PORT || 5000;
 //app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser())
-const httpsOptions = {
-    cert: fs.readFileSync(path.join(__dirname, 'ssl', 'server.cert')),
-    key: fs.readFileSync(path.join(__dirname, 'ssl', 'server.cert'))
-}
+// const httpsOptions = {
+//     cert: fs.readFileSync(path.join(__dirname, 'ssl', 'server.cert')),
+//     key: fs.readFileSync(path.join(__dirname, 'ssl', 'server.cert'))
+// }
 
 var rooms;
 var hashes;
