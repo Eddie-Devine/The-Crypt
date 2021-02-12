@@ -86,7 +86,7 @@ function create(){//create a room
             roomWelcomeMessage = `Welcome to ${roomName}, {NAME}`;
         }
         else{//name, owner password, and password were given
-            fetch(`http://76.176.77.192:8080/create?name=${roomName}&password=${roomPassword}&masterPassword=${roomMasterPassword}&welcomeMessage=${roomWelcomeMessage}`, {
+            fetch(`https://infinite-fjord-28854.herokuapp.com/create?name=${roomName}&password=${roomPassword}&masterPassword=${roomMasterPassword}&welcomeMessage=${roomWelcomeMessage}`, {
                 method: 'POST'
             })
             .then(response => response.text())
@@ -98,7 +98,7 @@ function create(){//create a room
 function wipeMessages(){
     var masterPassword = prompt('Master password:');
     if(masterPassword != null){
-        fetch(`http://76.176.77.192:8080/deleteMessages?room=${room}&password=${password}&masterPassword=${masterPassword}`, {
+        fetch(`https://infinite-fjord-28854.herokuapp.com/deleteMessages?room=${room}&password=${password}&masterPassword=${masterPassword}`, {
             method: 'POST'
         })
         .then(response => response.text())
@@ -130,7 +130,7 @@ function join(){//send the request to join a room
     else{//user is not trying to join public room so ask for password
         tempPassword = prompt('Room password:');
     }
-    fetch(`http://76.176.77.192:8080/join?room=${tempRoom}&password=${tempPassword}`, {
+    fetch(`https://infinite-fjord-28854.herokuapp.com/join?room=${tempRoom}&password=${tempPassword}`, {
         method: 'GET'
     })
     .then(response => response.text())
@@ -156,7 +156,7 @@ function send(){//send a message
             alert('You cannot send an empty message!');
         }
         else{//if everything checks out
-            fetch(`http://76.176.77.192:8080/send?room=${room}&password=${password}&message=${username}: ${message}`, {
+            fetch(`https://infinite-fjord-28854.herokuapp.com/send?room=${room}&password=${password}&message=${username}: ${message}`, {
                 method: 'POST'
             })
             .then(response => response.text())
@@ -197,7 +197,7 @@ function checkGetMessagesStatus(response){
 }
 function getMessages(){
     if(room != undefined || password != undefined){
-        fetch(`http://76.176.77.192:8080/messages?room=${room}&password=${password}`, {
+        fetch(`https://infinite-fjord-28854.herokuapp.com/messages?room=${room}&password=${password}`, {
             method: 'GET'
         })
         .then(response => response.text())
@@ -221,7 +221,7 @@ function changeRoomName(){//Change the name of the current room
 
     if(newName != null || masterPassword != null){
         clearInterval(refresh);
-        fetch(`http://76.176.77.192:8080/rename?name=${room}&newName=${newName}&password=${password}&masterPassword=${masterPassword}`, {
+        fetch(`https://infinite-fjord-28854.herokuapp.com/rename?name=${room}&newName=${newName}&password=${password}&masterPassword=${masterPassword}`, {
             method: 'POST'
         })
         .then(response => response.text())

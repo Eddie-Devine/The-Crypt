@@ -6,11 +6,11 @@ function afterResp(response){
     if(response != 'Correct password.'){
         alert(response);
     }
-    window.location = 'http://76.176.77.192:8080/crypt';
+    window.location = 'https://infinite-fjord-28854.herokuapp.com/crypt';
 }
 
 function login(){
-    fetch(`http://76.176.77.192:8080/login?password=${passwordBox.value}&name=${nameBox.value}`, {
+    fetch(`https://infinite-fjord-28854.herokuapp.com/login?password=${passwordBox.value}&name=${nameBox.value}`, {
         method: 'POST'
     })
     .then(response => response.text())
