@@ -1,0 +1,18 @@
+{
+    "names": [
+        "public",
+        "test"
+    ],
+    "public": {
+        "masterPassword": "under49",
+        "password": "open",
+        "welcomeMessage": "Welcome to the Crypt, {name}. This is the public chat room, no password needed!",
+        "messages": []
+    },
+    "test": {
+        "masterPassword": "test123",
+        "password": "test",
+        "welcomeMessage": "oi",
+        "messages": []
+    }
+}
