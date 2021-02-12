@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>THE CRYPT</title>
+    <link href="crypt.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+      <div id="bar">
+        <img src="join.png" title="Join a room" onclick="join()" id="join" class="left-icon">
+        <img src="create.png"title="Create a room" onclick="create()" id="create" class="left-icon">
+        <img src="leave.png" title="Leave" onclick="leave()" id="leave" class="left-icon">
+        <img src="change-name.png" title="Change name" onclick="changeName()" id="changeName" class="left-icon">
+        <img src="delete-messages.png" title="Wipe messages" onclick="wipeMessages()" id="changeRoomName" class="left-icon">
+        <img src="change-room-name.png" title="Change room name" onclick="changeRoomName()" id="changeRoomName" class="left-icon">
+
+        <img src="change-room-name.png" title="About" onclick="changeRoomName()" id="changeRoomName" class="right-icon">
+        <img src="change-room-name.png" title="Change room name" onclick="changeRoomName()" id="changeRoomName" class="right-icon">
+        <img src="change-room-name.png" title="Change room name" onclick="changeRoomName()" id="changeRoomName" class="right-icon">
+        <img src="change-room-name.png" title="Change room name" onclick="changeRoomName()" id="changeRoomName" class="right-icon">
+        <img src="change-room-name.png" title="Change room name" onclick="changeRoomName()" id="changeRoomName" class="right-icon">
+        <a href="http://76.176.77.192:8080/about"><img src="about.png" title="About" id="changeRoomName" class="right-icon"></a>
+
+        <h1 id="title">THE CRYPT</h1>
+        <h5 id="room">PUBLIC</h5>
+      </div>
+      <div id="chat"></div>
+      <input autocomplete="off" id="msgbox">
+      <img onclick="send()" id="sendButton" src="send.png">
+    <script src="crypt.js"></script>
+  </body>
+</html>

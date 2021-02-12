@@ -1,0 +1,152 @@
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+body{
+    background-color: #580016;
+}
+
+#bar{
+    background-color: black;
+    border: solid #005842;
+    width: 98%;
+    height: 10%; 
+}
+
+#title{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .3%;
+    width: 15%;
+    color: white;
+    z-index: 5;
+}
+
+#room{
+    text-align: center;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    color: white;
+    z-index: 5;
+}
+
+#chat{
+    margin-top: 1%;
+    height: 72%;
+    width: 97%;
+    border: solid #005842;
+    background-color: black;
+    overflow-y: scroll;
+    position: absolute;
+}
+
+.message{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-left: 1%;
+}
+
+#msgbox{
+    position: absolute;
+    height: 11%;
+    width: 90%;
+    border: solid;
+    bottom: 1%;
+    left: 1%;
+    font-size: 24px;
+}
+
+#sendButton{
+    width: 7.2%;
+    z-index: 1;
+    position: absolute;
+    right: 1%;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.left-icon{
+    width: 5%;
+    float: left;
+    margin-top: .25%;
+    margin-left: .25%;
+    cursor: pointer;
+}
+.left-icon:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.right-icon{
+    width: 5%;
+    float: right;
+    margin-top: .25%;
+    margin-right: .25%;
+    cursor: pointer;
+}
+.right-icon:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+/*
+    School chromebook: 1366x768
+    1080p: 942x850
+*/
+
+/* Chromebook */
+@media only screen and (max-height: 800px) {
+    #chat{
+        margin-top: .5%;
+        height: 69%;
+    }
+
+    .left-icon{
+        width: 6%;
+    }
+    .left-icon:hover {
+        box-shadow: 0 0 4px 2px rgba(0, 140, 186, 0.5);
+    }
+
+    .right-icon{
+        width: 6%;
+    }
+    .right-icon:hover {
+        box-shadow: 0 0 4px 2px rgba(0, 140, 186, 0.5);
+    }
+
+    #title{
+        margin-top: .7%;
+    }
+
+    #msgbox{
+        bottom: 2%;
+        left: 1%;
+        font-size: 24px;
+    }
+
+    #sendButton{
+        right: .5%;
+        bottom: 1%;
+    }
+}
+
+@media only screen and (min-height: 800px) {
+    #msgbox{
+        bottom: 2%;
+        left: .4%;
+        font-size: 34px;
+    }
+
+    #sendButton{
+        right: 1%;
+        bottom: 1%;
+    }
+}

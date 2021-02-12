@@ -1,0 +1,20 @@
+{
+  "name": "the-crypt",
+  "version": "1.0.0",
+  "description": "A secret encyped chatroom.",
+  "main": "crypt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Eddie Devine",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "cookie-parser": "^1.4.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "websocket": "^1.0.33"
+  }
+}
