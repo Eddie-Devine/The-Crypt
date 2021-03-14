@@ -73,7 +73,7 @@ function hash(str, method){
 }
 
 //backup rooms.json every hour
-var backupInterval = setInterval(backup, 3600000);
+var backupInterval = setInterval(backup, 60*1000*60);
 
 //delete messages at midnight (checks time every 30 minute)
 var janitorCheck = setInterval(function(){
@@ -81,7 +81,7 @@ var janitorCheck = setInterval(function(){
     if(date.getHours() == 24){
         wipeMessages(date.getHours());
     }
-}, 3600000);
+}, 60*1000*60);
 
 // https.createServer(httpsOptions, app)
 //     .listen(port, function(){

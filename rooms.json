@@ -9,10 +9,10 @@
         "welcomeMessage": "Welcome to the Crypt, {name}. This is the public chat room, no password needed!",
         "messages": []
     },
-    "test": {
-        "masterPassword": "test123",
+    "dev": {
+        "masterPassword": "under49",
         "password": "test",
-        "welcomeMessage": "oi",
+        "welcomeMessage": "TESTING",
         "messages": []
     }
 }
